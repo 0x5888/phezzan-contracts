@@ -13,25 +13,42 @@ async function main() {
   // If this script is run directly using `node` you may want to call compile
   // manually to make sure everything is compiled
   // await hre.run('compile');
-    /**
-     * Network: Rinekby
-     * Aggregator: USDC/USD
-     * Address: 0xa24de01df22b63d23Ebc1882a5E3d4ec0d907bFB
-     */
-    // const AggregatorV3InterfaceAddress = "0xa24de01df22b63d23Ebc1882a5E3d4ec0d907bFB";  // Rinkeby USDC/USD 
-    const AggregatorV3InterfaceAddress = "0x9211c6b3BF41A10F78539810Cf5c64e1BB78Ec60";  // Kovan USDC/USD 
-    
+    const feeds = [
+        "0xa24de01df22b63d23Ebc1882a5E3d4ec0d907bFB",  // USDC/USD 
+        "0xECe365B379E1dD183B20fc5f022230C044d51404",  // BTC/USD
+        "0x8A753747A1Fa494EC906cE90E9f37563A8AF630e"   // ETH/USD
+    ]
 
-  // We get the contract to deploy
-    const ChainlinkPriceFeed = await hre.ethers.getContractFactory("ChainlinkPriceFeed");
-    const chainlinkPriceFeed = await ChainlinkPriceFeed.deploy(AggregatorV3InterfaceAddress,{
-        gasLimit: 2500000,
-        gasPrice: 250000000000
-    });
+    for(i=0; i<feeds.length; i++){
+        // We get the contract to deploy
+        const ChainlinkPriceFeed = await hre.ethers.getContractFactory("ChainlinkPriceFeed");
+        const chainlinkPriceFeed = await ChainlinkPriceFeed.deploy(feeds[i],{
+            gasLimit: 2500000,
+            gasPrice: 250000000000
+        });
 
-    await chainlinkPriceFeed.deployed();
+        await chainlinkPriceFeed.deployed();
 
-    console.log("chainlinkPriceFeed deployed to:", chainlinkPriceFeed.address);
+        console.log(i+"-chainlinkPriceFeed  deployed to:", chainlinkPriceFeed.address);
+    };
+//     /**
+//      * Network: Rinekby
+//      * Aggregator: USDC/USD
+//      * Address: 0xa24de01df22b63d23Ebc1882a5E3d4ec0d907bFB
+//      */
+//     const AggregatorV3InterfaceAddress = "0xa24de01df22b63d23Ebc1882a5E3d4ec0d907bFB";  // Rinkeby USDC/USD 
+
+
+//   // We get the contract to deploy
+//     const ChainlinkPriceFeed = await hre.ethers.getContractFactory("ChainlinkPriceFeed");
+//     const chainlinkPriceFeed = await ChainlinkPriceFeed.deploy(AggregatorV3InterfaceAddress,{
+//         gasLimit: 2500000,
+//         gasPrice: 250000000000
+//     });
+
+//     await chainlinkPriceFeed.deployed();
+
+//     console.log("chainlinkPriceFeed deployed to:", chainlinkPriceFeed.address);
 }
 
 

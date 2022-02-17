@@ -1,8 +1,23 @@
 {
     "chainId": 4,
-    "contracts": {},
+    "contracts": {
+        "USDCUSDChainlinkPriceFeed": {
+            "address": "0x4034A2B251F311F2CD334FACF3891A463d7F34AA",
+            "name": "contracts/oracle/ChainlinkPriceFeed.sol:ChainlinkPriceFeed"
+        },
+        "BTCUSDChainlinkPriceFeed": {
+            "address": "0x02B7EBa76B47471427071358c86f3dD69e79830D",
+            "name": "contracts/oracle/ChainlinkPriceFeed.sol:ChainlinkPriceFeed"
+        },
+        "ETHUSDChainlinkPriceFeed": {
+            "address": "0xCdc0eE066e1212f727A62889CBcCBa60Aa5de53D",
+            "name": "contracts/oracle/ChainlinkPriceFeed.sol:ChainlinkPriceFeed"
+        }
+    },
     "externalContracts": {},
     "network": "rinkeby",
-    "pools": {}
+    "pools": {},
+    "url": "https://rinkeby.etherscan.io"
 
 }
+

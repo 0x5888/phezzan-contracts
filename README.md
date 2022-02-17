@@ -23,3 +23,14 @@ npx hardhat  verify --network rinkeby 0xCdc0eE066e1212f727A62889CBcCBa60Aa5de53D
 
 npx hardhat  verify --network kovan 0x17bFE81b15cE27Fa421dd9b5452B89079356c08A "0x9211c6b3BF41A10F78539810Cf5c64e1BB78Ec60"
 ```
+
+### BaseToken 
+
+```
+npx hardhat run scripts/BaseToken/base-token-deploy.js --network rinkeby
+
+npx hardhat  verify --network rinkeby 0xbBbA9df971763B8d01356FBEa86De68B4541944F 
+
+npx hardhat run scripts/BaseToken/initialize-args.js --network rinkeby
+
+```

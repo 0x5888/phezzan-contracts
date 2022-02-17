@@ -12,6 +12,10 @@
         "ETHUSDChainlinkPriceFeed": {
             "address": "0xCdc0eE066e1212f727A62889CBcCBa60Aa5de53D",
             "name": "contracts/oracle/ChainlinkPriceFeed.sol:ChainlinkPriceFeed"
+        },
+        "BaseToken": {
+            "address": "0xbBbA9df971763B8d01356FBEa86De68B4541944F",
+            "name": "contracts/BaseToken"
         }
     },
     "externalContracts": {},

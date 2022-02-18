@@ -116,13 +116,24 @@ npx hardhat  verify --network rinkeby 0x9B6cd96496B2f8Ffa7BEca679061aFf66eBDe20f
 ```
 npx hardhat run scripts/Token/virtual-token-deploy.js --network rinkeby
 
-npx hardhat  verify --network rinkeby 0x715f7a9564aF92C5784Cb9F3415BF95D3E4ed1e2
+npx hardhat run scripts/BaseToken/init-btc-virtual-token.js --network rinkeby
+
+npx hardhat  verify --network rinkeby 0xE17FE2392612FF39b7782DabC7B16e14090524c7
+
+
+---
 
 npx hardhat run scripts/Token/virtual-token-deploy.js --network rinkeby
 
-npx hardhat  verify --network rinkeby 0x715f7a9564aF92C5784Cb9F3415BF95D3E4ed1e2
+npx hardhat run scripts/BaseToken/init-eth-virtual-token.js --network rinkeby
+
+npx hardhat  verify --network rinkeby 0xBd22B62deABa5702A8437385E6776BA677F302d4
+
+---
 
 npx hardhat run scripts/Token/virtual-token-deploy.js --network rinkeby
 
-npx hardhat  verify --network rinkeby 0x715f7a9564aF92C5784Cb9F3415BF95D3E4ed1e2
+npx hardhat run scripts/BaseToken/init-ust-virtual-token.js --network rinkeby
+
+npx hardhat  verify --network rinkeby 0xCFD1A9748F05EE67d7A070a747d3b2Fb0EA59dD5
 ```

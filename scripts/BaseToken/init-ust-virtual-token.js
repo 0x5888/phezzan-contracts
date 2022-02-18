@@ -13,7 +13,7 @@ async function main() {
   // If this script is run directly using `node` you may want to call compile
   // manually to make sure everything is compiled
   // await hre.run('compile');
-    const baseToken = await contractAt("BaseToken", "0xBd22B62deABa5702A8437385E6776BA677F302d4");
+    const baseToken = await contractAt("BaseToken", "0xCFD1A9748F05EE67d7A070a747d3b2Fb0EA59dD5");
 
 
     await baseToken.initialize("vUST", "vUST", "0x4034A2B251F311F2CD334FACF3891A463d7F34AA");

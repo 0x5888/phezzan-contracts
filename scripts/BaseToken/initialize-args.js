@@ -17,10 +17,12 @@ async function main() {
 
     const baseToken = await contractAt("BaseToken", "0xbBbA9df971763B8d01356FBEa86De68B4541944F");
 
+    await baseToken.initialize("vaUST", "vaUST", "0x4034A2B251F311F2CD334FACF3891A463d7F34AA");
 
-    await baseToken.initialize("Terra USD", "UST", "0x4034A2B251F311F2CD334FACF3891A463d7F34AA");
+    console.log("vaUST deployed to:", baseToken.address);
 
-    console.log("baseToken deployed to:", baseToken.address);
+
+
 }
 
 

@@ -15,11 +15,14 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-    const baseToken = await contractAt("BaseToken", "0xbBbA9df971763B8d01356FBEa86De68B4541944F");
+    const accountBalance = await contractAt("AccountBalance", "0x3776c1195cBcD987813763B9a9658Ec802366317");
+    
+    const clearingHouseConfigArg = "0xD640e4FB5D5A97B29531c4499543F6be5699eC5d";
+    const orderBookArg = "0xDb4762e3EAA5c4332f868ef1Dfcf7Ed5E3b654BC";
 
-    await baseToken.initialize("vaUST", "vaUST", "0x4034A2B251F311F2CD334FACF3891A463d7F34AA");
+    await accountBalance.initialize(clearingHouseConfigArg, orderBookArg);   
 
-    console.log("vaUST deployed to:", baseToken.address);
+    console.log("AccountBalance Init Done !", accountBalance.address);
 
 
     

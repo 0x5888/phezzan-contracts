@@ -15,11 +15,11 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-    const baseToken = await contractAt("BaseToken", "0xbBbA9df971763B8d01356FBEa86De68B4541944F");
+    const insuranceFund = await contractAt("InsuranceFund", "0xd2177FfC4079A4912e0638a4b25Eb9547F376EDF");
 
-    await baseToken.initialize("vaUST", "vaUST", "0x4034A2B251F311F2CD334FACF3891A463d7F34AA");
+    await insuranceFund.initialize("0xeb8f08a975Ab53E34D8a0330E0D34de942C95926");  // USDC
 
-    console.log("vaUST deployed to:", baseToken.address);
+    console.log("InsuranceFund Init Done !", insuranceFund.address);
 
 
     

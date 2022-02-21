@@ -15,11 +15,11 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-    const baseToken = await contractAt("BaseToken", "0xbBbA9df971763B8d01356FBEa86De68B4541944F");
+    const clearingHouseConfig = await contractAt("ClearingHouseConfig", "0xd2177FfC4079A4912e0638a4b25Eb9547F376EDF");
 
-    await baseToken.initialize("vaUST", "vaUST", "0x4034A2B251F311F2CD334FACF3891A463d7F34AA");
+    await clearingHouseConfig.initialize();
 
-    console.log("vaUST deployed to:", baseToken.address);
+    console.log("ClearingHouseConfig Init Done !", clearingHouseConfig.address);
 
 
     

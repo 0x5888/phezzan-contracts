@@ -137,3 +137,59 @@ npx hardhat run scripts/BaseToken/init-ust-virtual-token.js --network rinkeby
 
 npx hardhat  verify --network rinkeby 0xCFD1A9748F05EE67d7A070a747d3b2Fb0EA59dD5
 ```
+
+
+
+### Init 
+
+- ClearingHouseConfig
+
+```
+npx hardhat run scripts/ClearingHouse/clearing-house-config-init.js --network rinkeby
+```
+
+- InsuranceFund
+
+```
+npx hardhat run scripts/InsuranceFund/insurance-fund-init.js --network rinkeby 
+```
+
+- MarketRegistry
+
+```
+npx hardhat run scripts/MarketRegistry/market-registry-init.js --network rinkeby 
+```
+
+- OrderBook 
+```
+npx hardhat run scripts/OrderBook/order-book-init.js --network rinkeby 
+```
+
+- Exchange
+
+```
+npx hardhat run scripts/Exchange/exchange-init.js --network rinkeby 
+```
+
+- AccountBalance 
+
+```
+npx hardhat run scripts/AccountBalance/account-balance-init.js --network rinkeby 
+```
+
+- Vault 
+
+```
+npx hardhat run scripts/Vault/vault-init.js --network rinkeby
+```
+
+- ClearingHouse
+```
+npx hardhat run scripts/ClearingHouse/clearing-house-init.js --network rinkeby 
+```
+
+
+
+
+## User Into 
+

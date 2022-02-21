@@ -15,14 +15,14 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-    const baseToken = await contractAt("BaseToken", "0xbBbA9df971763B8d01356FBEa86De68B4541944F");
+    const marketRegistry = await contractAt("MarketRegistry", "0x31178DBfDe7CDFd40D607c3e49Ea26CeE100B48D");
 
-    await baseToken.initialize("vaUST", "vaUST", "0x4034A2B251F311F2CD334FACF3891A463d7F34AA");
+    const uniswapV3FactoryArg = "0x1F98431c8aD98523631AE4a59f267346ea31F984"
+    const quoteTokenArg = "0xeb8f08a975Ab53E34D8a0330E0D34de942C95926"
 
-    console.log("vaUST deployed to:", baseToken.address);
+    await marketRegistry.initialize(uniswapV3FactoryArg, quoteTokenArg);  // UNI-V3  USDC
 
-
-    
+    console.log("MarketRegistry Init Done !", marketRegistry.address);
 
 
 }

@@ -15,11 +15,27 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-    const baseToken = await contractAt("BaseToken", "0xbBbA9df971763B8d01356FBEa86De68B4541944F");
+    const clearingHouse = await contractAt("ClearingHouse", "0xC7A02A73D00aAD2772BaD35Bf67bc54051dDC7a8");
 
-    await baseToken.initialize("vaUST", "vaUST", "0x4034A2B251F311F2CD334FACF3891A463d7F34AA");
+    const clearingHouseConfigArg = "0xD640e4FB5D5A97B29531c4499543F6be5699eC5d"
+    const vaultArg = "0x9B6cd96496B2f8Ffa7BEca679061aFf66eBDe20f"
+    const quoteTokenArg = "0x96e7588978B10CEAE986A3aE996A94D5f38e3993"  // == 18   USDC ? 
+    const uniV3FactoryArg = "0x1F98431c8aD98523631AE4a59f267346ea31F984"
+    const exchangeArg = "0xB518a56e157fC891BE072D235B5EaC0e605dCBbC"
+    const accountBalanceArg = "0x3776c1195cBcD987813763B9a9658Ec802366317"
+    const insuranceFundArg = "0xd2177FfC4079A4912e0638a4b25Eb9547F376EDF"
 
-    console.log("vaUST deployed to:", baseToken.address);
+    await clearingHouse.initialize(
+      clearingHouseConfigArg,
+      vaultArg,
+      quoteTokenArg,
+      uniV3FactoryArg,
+      exchangeArg,
+      accountBalanceArg,
+      insuranceFundArg
+      );
+
+    console.log("ClearingHouse Init Done !", clearingHouse.address);
 
 
     

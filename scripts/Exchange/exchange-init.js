@@ -15,14 +15,15 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-    const baseToken = await contractAt("BaseToken", "0xbBbA9df971763B8d01356FBEa86De68B4541944F");
+    const exchange = await contractAt("Exchange", "0xB518a56e157fC891BE072D235B5EaC0e605dCBbC");
 
-    await baseToken.initialize("vaUST", "vaUST", "0x4034A2B251F311F2CD334FACF3891A463d7F34AA");
+    const marketRegistryArg = "0x31178DBfDe7CDFd40D607c3e49Ea26CeE100B48D";
+    const orderBookArg = "0xDb4762e3EAA5c4332f868ef1Dfcf7Ed5E3b654BC";
+    const clearingHouseConfigArg = "0xD640e4FB5D5A97B29531c4499543F6be5699eC5d";
 
-    console.log("vaUST deployed to:", baseToken.address);
+    await exchange.initialize(marketRegistryArg, orderBookArg, clearingHouseConfigArg);   
 
-
-    
+    console.log("exchange Init Done !", exchange.address);
 
 
 }

@@ -47,7 +47,7 @@
             "createdBlockNumber": 0
         },
         "InsuranceFund": {
-            "address": "0x8681f16D54E69621Dca90F8BEd5aF351996567eB",
+            "address": "0xd2177FfC4079A4912e0638a4b25Eb9547F376EDF",
             "name": "contracts/InsuranceFund",
             "createdBlockNumber": 0
         },
@@ -67,7 +67,7 @@
             "createdBlockNumber": 0
         },
         "Vault": {
-            "address": "0x937728F7Df8a9773f1203d8f6F9A4316025D179e",
+            "address": "0x9B6cd96496B2f8Ffa7BEca679061aFf66eBDe20f",
             "name": "contracts/Vault",
             "createdBlockNumber": 0
         },
@@ -90,7 +90,7 @@
     "externalContracts": {
         "DefaultProxyAdmin": "",
         "USDC": "0x4DBCdF9B62e891a7cec5A2568C3F4FAF9E8Abe2b",
-        "aUST": "0x4DBCdF9B62e891a7cec5A2568C3F4FAF9E8Abe2b",
+        "aUST": "",
         "UniswapV3Factory": "0x1F98431c8aD98523631AE4a59f267346ea31F984"
     },
     "network": "rinkeby",

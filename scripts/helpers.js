@@ -25,7 +25,16 @@ async function contractAt(name, address, provider) {
     return await contractFactory.attach(address)
 }
 
+async function sendTxn(txnPromise, label) {
+    const txn = await txnPromise
+    console.info(`Sending ${label}...`)
+    await txn.wait()
+    console.info("... Sent!")
+    return txn
+}
+
 module.exports = {
     deployContract,
-    contractAt
+    contractAt,
+    sendTxn
 }

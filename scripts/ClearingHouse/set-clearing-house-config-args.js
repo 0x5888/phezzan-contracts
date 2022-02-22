@@ -15,15 +15,27 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-    const vault = await contractAt("Vault", contracts.Vault.address);
-  
-    const insuranceFundArg = contracts.InsuranceFund.address; 
-    const clearingHouseConfigArg = contracts.ClearingHouseConfig.address; 
-    const accountBalanceArg = contracts.AccountBalance.address; 
-    const exchangeArg = contracts.Exchange.address; 
-    await vault.initialize(insuranceFundArg, clearingHouseConfigArg, accountBalanceArg, exchangeArg);  
+    const clearingHouseConfig = await contractAt("ClearingHouseConfig", contracts.ClearingHouseConfig.address);
 
-    console.log("Vault Init Done !", vault.address);
+     // setMaxMarketsPerAccount
+    const maxMarketsPerAccountArg = 3;
+    await clearingHouseConfig.setMaxMarketsPerAccount(maxMarketsPerAccountArg);
+
+    console.log("ClearingHouseConfig Set Max MarketsPerAccount Done !", clearingHouseConfig.address, "PerAccount:", maxMarketsPerAccountArg);
+
+
+    // setSettlementTokenBalanceCap
+    const cap = 1000000000000;   
+    await clearingHouseConfig.setSettlementTokenBalanceCap(cap);
+
+    console.log("ClearingHouseConfig Set Token Balance Cap Done !", clearingHouseConfig.address, "cap:", cap);
+
+
+    // set MultiSigWallet address
+    // const address = "0x...";   
+    // await clearingHouseConfig.setOwner(address);
+
+    // console.log("ClearingHouseConfig setOwner Done !", clearingHouseConfig.address, "cap:", address);
 
 
 }

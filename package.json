@@ -29,5 +29,8 @@
     "ethers": "^5.5.4",
     "hardhat": "^2.8.4",
     "hardhat-deploy": "^0.10.5"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.0.2"
   }
 }

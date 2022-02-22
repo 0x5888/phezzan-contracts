@@ -193,3 +193,30 @@ npx hardhat run scripts/ClearingHouse/clearing-house-init.js --network rinkeby
 
 ## User Into 
 
+- 1. Vault: deposit
+
+- Config
+```
+** must check ** 
+settlementToken
+
+
+1.1 settlementTokenBalanceCap 
+
+InsuranceFund > ClearingHouseConfig > Vault
+
+npx hardhat run scripts/ClearingHouse/set-clearing-house-config-args.js --network rinkeby
+
+```
+
+
+
+- Action 
+```
+1. Approve aUST 
+npx hardhat run scripts/UserAction/0-approve-aust.js --network rinkeby
+
+2. Deposit aUST
+npx hardhat run scripts/UserAction/1-deposit-aust.js --network rinkeby
+
+```

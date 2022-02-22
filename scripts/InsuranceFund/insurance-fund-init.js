@@ -5,7 +5,7 @@
 // Runtime Environment's members available in the global scope.
 const hre = require("hardhat");
 const { contractAt } = require("../helpers")
-
+const { contracts, externalContracts } = require("../../metadata/rinkeby.json")
 
 async function main() {
   // Hardhat always runs the compile task when running scripts with its command
@@ -15,9 +15,14 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-    const insuranceFund = await contractAt("InsuranceFund", "0xd2177FfC4079A4912e0638a4b25Eb9547F376EDF");
+    // const insuranceFund = await contractAt("InsuranceFund", "0xd2177FfC4079A4912e0638a4b25Eb9547F376EDF");
 
-    await insuranceFund.initialize("0xeb8f08a975Ab53E34D8a0330E0D34de942C95926");  // USDC
+    // await insuranceFund.initialize("0xeb8f08a975Ab53E34D8a0330E0D34de942C95926");  // USDC
+
+
+    const insuranceFund = await contractAt("InsuranceFund", contracts.InsuranceFund.address);
+
+    await insuranceFund.initialize(externalContracts.USDC);  // USDC
 
     console.log("InsuranceFund Init Done !", insuranceFund.address);
 

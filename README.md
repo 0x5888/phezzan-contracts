@@ -195,7 +195,7 @@ npx hardhat run scripts/ClearingHouse/clearing-house-init.js --network rinkeby
 
 - 1. Vault: deposit
 
-- Config
+- Config & Set
 ```
 ** must check ** 
 settlementToken
@@ -203,10 +203,11 @@ settlementToken
 
 1.1 settlementTokenBalanceCap 
 
-InsuranceFund > ClearingHouseConfig > Vault
+InsuranceFund -> ClearingHouseConfig -> AccountBalance -> ClearingHouse -> Vault
 
 npx hardhat run scripts/ClearingHouse/set-clearing-house-config-args.js --network rinkeby
 
+npx hardhat run scripts/Vault/set-clearing-house.js --network rinkeby
 ```
 
 
@@ -218,5 +219,18 @@ npx hardhat run scripts/UserAction/0-approve-aust.js --network rinkeby
 
 2. Deposit aUST
 npx hardhat run scripts/UserAction/1-deposit-aust.js --network rinkeby
+
+2. Withdraw aUST
+npx hardhat run scripts/UserAction/2-withdraw-aust.js --network rinkeby
+
+
+
+3. ClearingHouse Open Long 
+
+
+4. Add Liquidity
+
+
+
 
 ```

@@ -208,6 +208,11 @@ InsuranceFund -> ClearingHouseConfig -> AccountBalance -> ClearingHouse -> Vault
 npx hardhat run scripts/ClearingHouse/set-clearing-house-config-args.js --network rinkeby
 
 npx hardhat run scripts/Vault/set-clearing-house.js --network rinkeby
+
+
+npx hardhat run scripts/AccountBalance/set-clearing-house.js --network rinkeby 
+
+npx hardhat run scripts/AccountBalance/set-vault.js --network rinkeby 
 ```
 
 

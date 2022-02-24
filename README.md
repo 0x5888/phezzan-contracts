@@ -203,7 +203,7 @@ settlementToken
 
 1.1 settlementTokenBalanceCap 
 
-InsuranceFund -> ClearingHouseConfig -> AccountBalance -> ClearingHouse -> Vault
+Exchange -> InsuranceFund -> ClearingHouseConfig -> AccountBalance -> ClearingHouse -> Vault
 
 npx hardhat run scripts/ClearingHouse/set-clearing-house-config-args.js --network rinkeby
 
@@ -213,7 +213,21 @@ npx hardhat run scripts/Vault/set-clearing-house.js --network rinkeby
 npx hardhat run scripts/AccountBalance/set-clearing-house.js --network rinkeby 
 
 npx hardhat run scripts/AccountBalance/set-vault.js --network rinkeby 
+
+1.2 Exchange 
+
+npx hardhat run scripts/Exchange/set-account-balance.js --network rinkeby
+
+npx hardhat run scripts/Exchange/set-clearing-house.js --network rinkeby 
+
+npx hardhat run scripts/Exchange/set-max-tick-crossed-within-block-btc.js --network rinkeby 
+
+npx hardhat run scripts/Exchange/set-max-tick-crossed-within-block-eth.js --network rinkeby 
+
+1.3 ClearHouse
+
 ```
+
 
 
 
@@ -234,7 +248,6 @@ npx hardhat run scripts/UserAction/2-withdraw-aust.js --network rinkeby
 
 
 4. Add Liquidity
-
 
 
 

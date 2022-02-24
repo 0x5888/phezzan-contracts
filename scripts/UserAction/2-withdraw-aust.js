@@ -13,12 +13,11 @@ async function main() {
     const vault = await contractAt("Vault", contracts.Vault.address);
     
     const aUstAddress = externalContracts.aUST
-    const amountX10_D = 10000000   //1e7  10 aUST
+    const amountX10_D = 5000000   //5e6  5 aUST
     const account = owner.address;
     const message = `deposit:  ${amountX10_D} aUST, trader: ${account} `
 
     await sendTxn(vault.deposit(aUstAddress, amountX10_D), message)
-
 
 }
 

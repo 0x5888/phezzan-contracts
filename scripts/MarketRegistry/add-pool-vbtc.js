@@ -5,26 +5,21 @@
 // Runtime Environment's members available in the global scope.
 const hre = require("hardhat");
 const { contractAt } = require("../helpers")
-const { contracts, externalContracts } = require("../../metadata/rinkeby.json")
-
+const { contracts } = require("../../metadata/rinkeby.json")
 
 async function main() {
-  // Hardhat always runs the compile task when running scripts with its command
-  // line interface.
-  //
-  // If this script is run directly using `node` you may want to call compile
-  // manually to make sure everything is compiled
-  // await hre.run('compile');
 
     const marketRegistry = await contractAt("MarketRegistry", contracts.MarketRegistry.address);
 
-    const uniswapV3FactoryArg = externalContracts.UniswapV3Factory
-    const quoteTokenArg = contracts.QuoteToken.address        // vUST
+    const baseToken = contracts.vBTC.address
+    const feeRatio = 	3000
 
-    await marketRegistry.initialize(uniswapV3FactoryArg, quoteTokenArg);      // UNI-V3  USDC
+    const quoteToken = await marketRegistry.getQuoteToken()
+    console.log(baseToken, quoteToken)
+    // addPool(address baseToken, uint24 feeRatio) 
+    await marketRegistry.addPool(baseToken, feeRatio);  // vBTC  
 
-    console.log("MarketRegistry Init Done !", marketRegistry.address);
-
+    console.log("MarketRegistry addPool vBTC Done !", marketRegistry.address);
 
 }
 

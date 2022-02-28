@@ -224,7 +224,39 @@ npx hardhat run scripts/Exchange/set-max-tick-crossed-within-block-btc.js --netw
 
 npx hardhat run scripts/Exchange/set-max-tick-crossed-within-block-eth.js --network rinkeby 
 
-1.3 ClearHouse
+
+1.3 MarketRegistry 
+
+npx hardhat run scripts/MarketRegistry/set-clearing-house.js --network rinkeby 
+
+npx hardhat run scripts/MarketRegistry/set-max-orders-per-market.js --network rinkeby  
+
+
+- config BaseToken 
+
+npx hardhat run scripts/BaseToken/vBTC/mint-maximum-to.js --network rinkeby
+
+npx hardhat run scripts/BaseToken/vBTC/add-whitelist.js --network rinkeby 
+
+- config QuoteToken
+
+npx hardhat run scripts/Token/mint-maximum-to.js  --network rinkeby
+
+
+
+
+- config ClearHouse
+
+npx hardhat run scripts/MarketRegistry/add-pool-vbtc.js --network rinkeby   
+
+npx hardhat run scripts/MarketRegistry/set-fee-ratio-vbtc.js --network rinkeby  
+
+
+
+1.4 ClearHouse
+
+
+
 
 ```
 

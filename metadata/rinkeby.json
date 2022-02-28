@@ -52,7 +52,7 @@
             "createdBlockNumber": 0
         },
         "MarketRegistry": {
-            "address": "0x31178DBfDe7CDFd40D607c3e49Ea26CeE100B48D",
+            "address": "0xC63c742329Ba016490B9594Ef3e1f7e92dA544B0",
             "name": "contracts/MarketRegistry",
             "createdBlockNumber": 0
         },
@@ -62,7 +62,7 @@
             "createdBlockNumber": 0
         },
         "QuoteToken": {
-            "address": "0x96e7588978B10CEAE986A3aE996A94D5f38e3993",
+            "address": "0xCFD1A9748F05EE67d7A070a747d3b2Fb0EA59dD5",
             "name": "contracts/QuoteToken",
             "createdBlockNumber": 0
         },

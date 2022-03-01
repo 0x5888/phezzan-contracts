@@ -242,6 +242,7 @@ npx hardhat run scripts/BaseToken/vBTC/add-whitelist.js --network rinkeby
 
 npx hardhat run scripts/Token/mint-maximum-to.js  --network rinkeby
 
+npx hardhat run scripts/Token/add-whitelist.js --network rinkeby
 
 
 
@@ -251,7 +252,13 @@ npx hardhat run scripts/MarketRegistry/add-pool-vbtc.js --network rinkeby
 
 npx hardhat run scripts/MarketRegistry/set-fee-ratio-vbtc.js --network rinkeby  
 
+npx hardhat run scripts/MarketRegistry/set-insurance-fund-fee-ratio.js --network rinkeby
 
+- uni pools
+
+npx hardhat run scripts/Pools/create-pool.js  --network rinkeby
+
+npx hardhat run scripts/Pools/init-pool.js --network rinkeby
 
 1.4 ClearHouse
 

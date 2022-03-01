@@ -51,14 +51,14 @@ module.exports = {
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161`,
       accounts: [PRIVATE_KEY],
-      gas: 2100000,
+      gas: 21000000,
       gasPrice: 8000000000,
       allowUnlimitedContractSize: true,
     },
     kovan: {
       url: `https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161`,
       accounts: [PRIVATE_KEY],
-      gas: 2100000,
+      gas: 21000000,
       gasPrice: 8000000000,
       allowUnlimitedContractSize: true,
     },

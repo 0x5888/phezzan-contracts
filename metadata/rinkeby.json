@@ -94,7 +94,22 @@
         "UniswapV3Factory": "0x1F98431c8aD98523631AE4a59f267346ea31F984"
     },
     "network": "rinkeby",
-    "pools": {},
+    "pools": [
+        {
+            "address": "0x0087E14F09C37eAB9ae168FeDA792643f07BB903",
+            "baseAddress": "0xE17FE2392612FF39b7782DabC7B16e14090524c7",
+            "baseSymbol": "vBTC",
+            "quoteAddress": "0xCFD1A9748F05EE67d7A070a747d3b2Fb0EA59dD5",
+            "quoteSymbol": "vUSD"
+            },
+        {
+            "address": "0xF76217639b21A9ADAc2bDAED24C2e4eBe7b91E0b",
+            "baseAddress": "0xBd22B62deABa5702A8437385E6776BA677F302d4",
+            "baseSymbol": "vETH",
+            "quoteAddress": "0xCFD1A9748F05EE67d7A070a747d3b2Fb0EA59dD5",
+            "quoteSymbol": "vUSD"
+            }
+        ],
     "url": "https://rinkeby.etherscan.io"
 
 }

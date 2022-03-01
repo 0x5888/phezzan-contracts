@@ -1,6 +1,6 @@
 const hre = require("hardhat");
 const { contractAt } = require("../../helpers")
-const { contracts } = require("../../../metadata/rinkeby.json")
+const { contracts, pools  } = require("../../../metadata/rinkeby.json")
 
 async function main() {
 
@@ -10,6 +10,11 @@ async function main() {
     await baseToken.addWhitelist(contracts.ClearingHouse.address);
 
     console.log("addWhitelist ClearingHouse: vBTC ", baseToken.address);
+
+    // addWhitelist(address account)
+    await baseToken.addWhitelist(pools[0].address);
+
+    console.log("addWhitelist pools: vBTC ", baseToken.address);
 }
 
 

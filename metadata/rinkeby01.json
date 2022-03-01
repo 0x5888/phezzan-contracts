@@ -94,7 +94,10 @@
         "UniswapV3Factory": "0x1F98431c8aD98523631AE4a59f267346ea31F984"
     },
     "network": "rinkeby",
-    "pools": {},
+    "pools": {
+        "vBTC-vUST": "0x0087E14F09C37eAB9ae168FeDA792643f07BB903",
+        "vETH-vUST": "0xF76217639b21A9ADAc2bDAED24C2e4eBe7b91E0b"
+    },
     "url": "https://rinkeby.etherscan.io"
 
 }

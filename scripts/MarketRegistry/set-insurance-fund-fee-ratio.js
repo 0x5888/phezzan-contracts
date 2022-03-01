@@ -12,11 +12,18 @@ async function main() {
     const marketRegistry = await contractAt("MarketRegistry", contracts.MarketRegistry.address);
 
     const baseToken = contracts.vETH.address 
-    const feeRatio =  1000
+    const insuranceFundFeeRatioArg =  100000
     // addPool(address baseToken, uint24 feeRatio) 
-    await marketRegistry.setFeeRatio(baseToken, feeRatio);  // vETH
+    await marketRegistry.setInsuranceFundFeeRatio(baseToken, insuranceFundFeeRatioArg);  // vETH
 
-    console.log("MarketRegistry setFeeRatio vBTC Done !", marketRegistry.address);
+    console.log("MarketRegistry setInsuranceFundFeeRatio vETH Done !", marketRegistry.address);
+
+    const baseToken_2 = contracts.vBTC.address 
+
+    // addPool(address baseToken, uint24 feeRatio) 
+    await marketRegistry.setInsuranceFundFeeRatio(baseToken_2, insuranceFundFeeRatioArg);  // vETH
+
+    console.log("MarketRegistry setInsuranceFundFeeRatio vBTC Done !", marketRegistry.address);
 
 }
 

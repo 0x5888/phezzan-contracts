@@ -5,7 +5,7 @@
 // Runtime Environment's members available in the global scope.
 const hre = require("hardhat");
 const { contractAt } = require("../helpers")
-
+const { contracts } = require("../../metadata/rinkeby.json")
 
 async function main() {
   // Hardhat always runs the compile task when running scripts with its command
@@ -15,8 +15,8 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-    const orderBook = await contractAt("OrderBook", "0xDb4762e3EAA5c4332f868ef1Dfcf7Ed5E3b654BC");
-    const marketRegistryArg = "0x31178DBfDe7CDFd40D607c3e49Ea26CeE100B48D";
+    const orderBook = await contractAt("OrderBook", contracts.OrderBook.address);
+    const marketRegistryArg = contracts.MarketRegistry.address;
 
     await orderBook.initialize(marketRegistryArg);  
 

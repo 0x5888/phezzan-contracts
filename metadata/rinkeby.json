@@ -32,17 +32,17 @@
             "createdBlockNumber": 0
         },
         "ClearingHouse": {
-            "address": "0xC7A02A73D00aAD2772BaD35Bf67bc54051dDC7a8",
+            "address": "0xCd1Db973e367659B47d8ad150840Cb59682d87e6",
             "name": "contracts/ClearingHouse",
             "createdBlockNumber": 0
         },
         "AccountBalance": {
-            "address": "0x3776c1195cBcD987813763B9a9658Ec802366317",
+            "address": "0x2AbB3346Dc1D8D0eA29c6b6103089809Ac208022",
             "name": "contracts/AccountBalance",
             "createdBlockNumber": 0
         },
         "Exchange": {
-            "address": "0xB518a56e157fC891BE072D235B5EaC0e605dCBbC",
+            "address": "0x67D1Dc9FfbfE89d73dC1BE9c00ba10781A91Cd00",
             "name": "contracts/Exchange",
             "createdBlockNumber": 0
         },
@@ -57,7 +57,7 @@
             "createdBlockNumber": 0
         },
         "OrderBook": {
-            "address": "0xDb4762e3EAA5c4332f868ef1Dfcf7Ed5E3b654BC",
+            "address": "0x036040FfEe9e9f4D2E61c1e4104d23Ce7c243E2A",
             "name": "contracts/OrderBook",
             "createdBlockNumber": 0
         },

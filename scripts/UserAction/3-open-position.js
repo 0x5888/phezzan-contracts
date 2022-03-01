@@ -35,19 +35,19 @@ async function main() {
     // bytes32 referralCode;
 
     const params = [
-        "0xE17FE2392612FF39b7782DabC7B16e14090524c7",   // baseToken
+        contracts.vETH.address,   // baseToken
         true,                                           // isBaseToQuote
         true,                                           // isExactInput
         2000000,                                        // amount
         0,                                              // oppositeAmountBound
         2645705244,                                     // deadline
-        0,                                              // sqrtPriceLimitX96
+        hre.ethers.BigNumber.from("4667841982334275262406027271815"),                                              // sqrtPriceLimitX96
         hre.ethers.utils.formatBytes32String("0"),                      // referralCode
     ]
 
     const message = `openPosition:  ${params}  address:  ${contracts.ClearingHouse.address} `
 
-    await sendTxn(clearingHouse.openPosition(params), message)
+    await sendTxn(clearingHouse.openPosition(params, { gasLimit: 25000000, gasPrice: 50000000000 }), message)
 
 }
 

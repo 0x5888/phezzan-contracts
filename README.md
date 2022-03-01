@@ -260,7 +260,15 @@ npx hardhat run scripts/Pools/create-pool.js  --network rinkeby
 
 npx hardhat run scripts/Pools/init-pool.js --network rinkeby
 
-1.4 ClearHouse
+
+1.4 Order Book 
+
+npx hardhat run scripts/OrderBook/order-book-deploy.js --network rinkeby  
+
+npx hardhat run scripts/OrderBook/order-book-init.js --network rinkeby   
+
+
+1.5 ClearHouse
 
 
 

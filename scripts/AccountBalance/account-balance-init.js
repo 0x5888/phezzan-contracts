@@ -5,6 +5,7 @@
 // Runtime Environment's members available in the global scope.
 const hre = require("hardhat");
 const { contractAt } = require("../helpers")
+const { contracts, externalContracts } = require("../../metadata/rinkeby.json")
 
 
 async function main() {
@@ -15,10 +16,10 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-    const accountBalance = await contractAt("AccountBalance", "0x3776c1195cBcD987813763B9a9658Ec802366317");
+    const accountBalance = await contractAt("AccountBalance", contracts.AccountBalance.address);
     
-    const clearingHouseConfigArg = "0xD640e4FB5D5A97B29531c4499543F6be5699eC5d";
-    const orderBookArg = "0xDb4762e3EAA5c4332f868ef1Dfcf7Ed5E3b654BC";
+    const clearingHouseConfigArg = contracts.ClearingHouseConfig.address;
+    const orderBookArg = contracts.OrderBook.address;
 
     await accountBalance.initialize(clearingHouseConfigArg, orderBookArg);   
 
